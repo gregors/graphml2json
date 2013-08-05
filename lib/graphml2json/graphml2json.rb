@@ -18,14 +18,13 @@ class Graphml2Json
 
     nodes.each_with_index do |n, index|
       @mapping[n[:id]] = index 
-      @graph[:nodes] << {:name => index} #"{ name: \"#{index}\" },"
+      @graph[:nodes] << {:name => index}
     end
 
     @json_edges = [] 
     edges.each do |e|
       source = @mapping[e[:source]]
       target = @mapping[e[:target]]
-      #@json_edges << "{ source: \"#{source}\", target: \"#{target}\" }," 
       @graph[:edges] << { :source => source, :target => target }
     end
 
