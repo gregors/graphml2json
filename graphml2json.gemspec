@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["<gregory.ostermayr@gmail.com>"]
   spec.description   = %q{Convert graphml to json}
   spec.summary       = %q{Convert graphml to json}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/gregors/graphml2json"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
