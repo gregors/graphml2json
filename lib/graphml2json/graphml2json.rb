@@ -5,9 +5,10 @@ class Graphml2Json
 
   def self.generate(xml_string) 
     doc = Nokogiri::XML(xml_string)
-    graph = doc.xpath('//xmlns:graph')
-    nodes = graph.xpath('//xmlns:node')
-    edges = graph.xpath('//xmlns:edge')
+    doc.remove_namespaces!
+    graph = doc.xpath('//graph')
+    nodes = graph.xpath('//node')
+    edges = graph.xpath('//edge')
 
     @mapping = {}
     @json_nodes = []
