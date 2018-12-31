@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/graphml2json.rb'
+
+puts Graphml2Json.generate(ARGF.read)
