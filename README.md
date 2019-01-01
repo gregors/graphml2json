@@ -100,15 +100,12 @@ $ curl http://graphml.graphdrawing.org/primer/attributes.graphml | graphml2json 
 
 ```
 
-### From Docker
+### For Docker Dev
 
-     docker build -t graphml .
+     docker build -t graphml_dev .
 
      # run tests
-     docker run -it -rm graphml
-
-     # notice no t in docker run command
-     curl http://graphml.graphdrawing.org/primer/attributes.graphml | docker run -i --rm graph bin/graphml2json
+     docker run -it -rm graphml_dev
 
 ## Changelog
 
