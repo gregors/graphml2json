@@ -31,7 +31,7 @@ Or install it yourself as:
 => "{\"nodes\":[{\"name\":0,\"d0\":\"green\"},{\"name\":1},{\"name\":2,\"d0\":\"blue\"},{\"name\":3,\"d0\":\"red\"},{\"name\":4},{\"name\":5,\"d0\":\"turquoise\"}],\"edges\":[{\"source\":0,\"target\":2,\"d1\":\"1.0\"},{\"source\":0,\"target\":1,\"d1\":\"1.0\"},{\"source\":1,\"target\":3,\"d1\":\"2.0\"},{\"source\":3,\"target\":2},{\"source\":2,\"target\":4},{\"source\":3,\"target\":5},{\"source\":5,\"target\":4,\"d1\":\"1.1\"}]}"
 ```
 
-### From a terminal 
+### From a terminal
 
 You can also invoke the `graphml2json` utility from the command line. It takes stdin as input.
 
@@ -100,12 +100,20 @@ $ curl http://graphml.graphdrawing.org/primer/attributes.graphml | graphml2json 
 
 ```
 
+### Usage From Docker
+
+    cd docker_runner
+    docker build -t graphml2json .
+
+    # notice no t in docker run command
+    curl http://graphml.graphdrawing.org/primer/attributes.graphml | docker run -i --rm graphml2json
+
 ### For Docker Dev
 
      docker build -t graphml_dev .
 
      # run tests
-     docker run -it -rm graphml_dev
+     docker run -it --rm graphml_dev
 
 ## Changelog
 
