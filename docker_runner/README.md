@@ -10,5 +10,5 @@ This utility takes graphml and converts it to json suitable for use in D3
 
     docker build -t graphml2json .
 
-    # notice no t in docker run command
+    # notice no `t` in docker run command
     curl http://graphml.graphdrawing.org/primer/attributes.graphml | docker run -i --rm graphml2json
