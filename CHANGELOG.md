@@ -1,3 +1,7 @@
+# 0.1.1 / 2020-07-20
+
+* Update dependencies
+
 # 0.1.0 / 2018-12-30
 
 * Add command line excutable helper
